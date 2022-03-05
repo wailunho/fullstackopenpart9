@@ -6,7 +6,7 @@ interface MultiplyValues2 {
 const parseArguments2 = (args: Array<string>): MultiplyValues2 => {
   if (args.length < 4) throw new Error("Not enough arguments");
 
-  const [first, second, target, ...rest] = args;
+  const [_first, _second, target, ...rest] = args;
   if (!isNaN(Number(target)) && rest.every((x) => !isNaN(Number(x)))) {
     return {
       value1: rest.map((x) => Number(x)),
