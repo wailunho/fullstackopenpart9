@@ -1,0 +1,24 @@
+{
+  "name": "fullstackopenpart9",
+  "version": "1.0.0",
+  "description": "fullstackopenpart9",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "calculateBmi": "ts-node bmiCalculator.ts",
+    "calculateExercises": "ts-node exerciseCalculator.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wailunho/fullstackopenpart9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wailunho/fullstackopenpart9/issues"
+  },
+  "homepage": "https://github.com/wailunho/fullstackopenpart9#readme",
+  "devDependencies": {
+    "ts-node": "^10.6.0"
+  }
+}
