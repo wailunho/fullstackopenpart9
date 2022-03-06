@@ -17,7 +17,7 @@ const parseArguments2 = (args: Array<string>): MultiplyValues2 => {
   }
 };
 
-interface Result {
+export interface Result {
   periodLength: number;
   trainingDays: number;
   success: boolean;
@@ -27,7 +27,7 @@ interface Result {
   average: number;
 }
 
-const calculateExercises = (
+export const calculateExercises = (
   dailyExerciseHours: Array<number>,
   target: number
 ): Result => {
