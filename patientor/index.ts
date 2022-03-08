@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import diagnoseService from "./services/diagnose";
 import patientService from "./services/patient";
-import toPatient from "./utils";
+import { toPatient } from "./utils";
 
 const app = express();
 app.use(express.json());
@@ -22,6 +22,10 @@ app.get("/api/diagnoses", (_req, res) => {
 
 app.get("/api/patients", (_req, res) => {
   res.send(patientService.getAll());
+});
+
+app.get("/api/patients/:id", (req, res) => {
+  res.send(patientService.get(String(req.params.id)));
 });
 
 app.post("/api/patients", (req, res) => {

@@ -1,6 +1,6 @@
 import { NewPatient, Gender } from "./types";
 
-const toPatient = (obj: {
+export const toPatient = (obj: {
   name: string;
   dateOfBirth: string;
   ssn: string;
@@ -13,7 +13,6 @@ const toPatient = (obj: {
     ssn: obj.ssn,
     gender: obj.gender,
     occupation: obj.occupation,
+    entries: [],
   };
 };
-
-export default toPatient;

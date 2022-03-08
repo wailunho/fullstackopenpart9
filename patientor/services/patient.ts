@@ -6,6 +6,10 @@ const getAll = (): Patient[] => {
   return patientData;
 };
 
+const get = (id: string): Patient | undefined => {
+  return patientData.find((x: Patient) => x.id === id);
+};
+
 const create = (obj: NewPatient): Patient => {
   const newObj = { ...obj, id: uuid() };
   patientData.push(newObj);
@@ -13,6 +17,7 @@ const create = (obj: NewPatient): Patient => {
 };
 
 export default {
+  get,
   getAll,
   create,
 };
